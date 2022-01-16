@@ -6,10 +6,9 @@ import createConnection from "./database";
 createConnection();
 const server = express();
 
+server.use(express.json())
 server.use(router);
 
 server.listen(5000, ()=>{
     console.log("server rodando")
-})
-
-
+});
